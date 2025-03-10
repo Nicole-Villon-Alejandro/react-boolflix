@@ -1,7 +1,13 @@
+import { Search } from "./Search"
+
 export function Header() {
   return (
-    <div>
-      <h1> hola</h1>
-    </div>
+    <header>
+        <h1>Booflix</h1>
+        <Search />
+    </header>
+
+
+    
   )
 }
