@@ -1,17 +1,26 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
+import { useGlobalContext } from "../context/GlobalContext"
 
 
 
 export function Search() {
 
-    const [query, setQuery] = useState('')
+    const {setQuery, HandleSubmit} = useGlobalContext()
+
+    //const [query, setQuery] = useState('')
+
+
+    /*const HandleSubmit = (e) => {
+        e.preventDefault()
+        console.log(query)
+    }*/
 
 
 
 
     return (
       <> 
-        <form>
+        <form onSubmit={ e => HandleSubmit (e)}>
             <input type="text" onChange={ e => setQuery (e.target.value)} />
             <button type="submit">Search</button>
         </form>
