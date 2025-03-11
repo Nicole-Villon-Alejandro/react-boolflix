@@ -1,7 +1,30 @@
+import { useGlobalContext } from "../context/GlobalContext"
+
 export function Main() {
+
+  const { movies,  tvs} = useGlobalContext()
+
+    
   return (
-    <div>
-      <h1>My React App</h1>
-    </div>
+    <main>
+      <h1>Peliculas</h1>
+      <ul>
+        {movies.map((movie) => {
+          return <li key={movie.id}>{movie.title}</li>
+        })}
+      </ul>
+
+      <h1>Series</h1>
+      <ul>
+        {tvs.map((tv) => {
+          return <li key={tv.id}>{tv.name}</li>
+        })}
+      </ul>
+
+
+
+
+
+    </main>
   )
 }
