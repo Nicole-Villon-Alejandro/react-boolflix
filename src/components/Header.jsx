@@ -2,8 +2,8 @@ import { Search } from "./Search"
 
 export function Header() {
   return (
-    <header>
-        <h1>Booflix</h1>
+    <header className="header">
+        <h1 className="title">Booflix</h1>
         <Search />
     </header>
 

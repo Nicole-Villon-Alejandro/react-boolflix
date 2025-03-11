@@ -11,7 +11,7 @@ export function Main() {
     
   return (
 
-    <main>
+    <main className="main">
       <h1>Peliculas</h1>
       <ResultsList type="movies" items={movies} />
         {/*<ul>
