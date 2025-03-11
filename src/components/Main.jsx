@@ -1,4 +1,6 @@
 import { useGlobalContext } from "../context/GlobalContext"
+import { ResultsList } from "./ResultsList"
+
 
 export function Main() {
 
@@ -8,23 +10,23 @@ export function Main() {
 
     
   return (
+
     <main>
       <h1>Peliculas</h1>
-      <ul>
+      <ResultsList type="movies" items={movies} />
+        {/*<ul>
         {movies.map((movie) => {
           return <li key={movie.id}>{movie.title}-{ HandleStars (parseInt (movie.vote_average))}</li>
         })}
-      </ul>
+        </ul>*/}
 
       <h1>Series</h1>
-      <ul>
+      <ResultsList type="tvs" items={tvs} />
+      {/*<ul>
         {tvs.map((tv) => {
           return <li key={tv.id}>{tv.name}-{ HandleStars (parseInt (tv.vote_average))}</li>
         })}
-      </ul>
-
-
-
+      </ul>*/}
 
 
     </main>
