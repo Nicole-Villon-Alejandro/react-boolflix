@@ -7,8 +7,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .main{
-    background-color: rgb(238, 202, 202);
+    height: auto;
     display: flex;
+    background-color: rgb(238, 202, 202);
     justify-content: space-around;
     
 }
